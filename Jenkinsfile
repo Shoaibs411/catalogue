@@ -7,7 +7,7 @@ pipeline{
         stage('Lint Checks'){
             steps{
                 script{
-                    sample.info()
+                    sample.info("Catalogue")
                 }
                 sh "echo ***** Starting Style Checks ***** "
                 sh "/home/centos/node_modules/jslint/bin/jslint.js server.js || true"
